@@ -1,11 +1,28 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "os"
+    "strings"
+)
+
 
 func main() {
-    x := 2
-    fmt.Println(x)
+    
+    dat, err := os.ReadFile("input")
+    fmt.Print(string(dat))
+
+    if err != nil {
+        panic(err)
+    }
+    
+    var s []string = strings.Split(string(dat), "\n")
+
+    //for 
+    fmt.Print(s)
+    
 }
+
 
 
 
